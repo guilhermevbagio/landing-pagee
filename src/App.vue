@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black h-screen w-screen pt-2">
+  <div class="h-screen w-screen pt-2">
     <header>
       
       <UpBar />

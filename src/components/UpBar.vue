@@ -1,7 +1,7 @@
 <template>
-    <div class="text-white border-2  border-white rounded-md p-4 justify-between text-2xl px-4 mx-2 font-gasoek flex items-center">
+    <div class="text-white flex p-4 justify-start text-4xl px-4 mx-2 font-gasoek items-center">
         <div>
-            GUILHERMEVBAGIO
+            GUILHERMEvBAGIO._
         </div>
 
     </div>
