@@ -11,8 +11,9 @@ export default {
         'gasoek': ['GasoekOne', 'sans-serif'],
       },
       colors: {
-        'white': '#e7e8d4',
-        'black': '#1f272f',
+        'white': '#f7ce50',
+        'black': '#130001',
+        'accent' : '#5a1520',
     },
   },
   plugins: [],

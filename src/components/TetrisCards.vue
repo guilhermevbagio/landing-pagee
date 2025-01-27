@@ -4,22 +4,20 @@
         tag="div" 
         class="grid grid-cols-3 grid-rows-3 gap-3 relative"
     >
-    <div  v-for="(card, index) in board" 
-    :key="card || `empty-${index}`">
-        <Card 
-            v-if="card"
-            :class="getClass(index)"
-            class="transition-all duration-300 ease-in-out"
-        >
-            {{ card }}
-        </Card>
-    </div>
+        <div  v-for="(card, index) in board" :key="card || `empty-${index}`">
+            <Card 
+                v-if="card"
+                :class="getClass(index)"
+                class="transition-all duration-300 ease-in-out font-raleway"
+            >
+            </Card>
+        </div>
     </TransitionGroup>
 </template>
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
-import Card from './Card.vue';
+import Card from './CardTetris.vue';
 
 const board = ref([]);
 
@@ -89,7 +87,7 @@ onMounted(() => {
     
     const intervalId = setInterval(() => {
         moveOneCard();
-    }, 1000);
+    }, 500);
     
     onBeforeUnmount(() => {
         clearInterval(intervalId);
@@ -99,12 +97,12 @@ onMounted(() => {
 
 <style scoped>
 .shuffle-move {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .shuffle-enter-active,
 .shuffle-leave-active {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .shuffle-enter-from,
