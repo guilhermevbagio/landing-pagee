@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'raleway': ['Raleway', 'sans-serif'],
+        'playfair': ['playfair', 'serif'],
         'gasoek': ['GasoekOne', 'sans-serif'],
-        'noto': ['Noto', 'serif'],
+        'raleway': ['Raleway', 'sans-serif'],
       },
       colors: {
-        'bright': '#f7ce50',
-        'dark': '#130001',
-        'accent' : '#5a1520',
+        'bright': '#e0dee1',
+        'dark': '#000407',
+        'accent' : '#d5393c',
     },
   },
   plugins: [],

@@ -11,8 +11,8 @@ const canvas = ref(null);
 let frames = [];
 let frameIndex = 0;
 let interval = null;
-let charWidth = 12; // Increased spacing for better separation
-let charHeight = 10; // Reduced line height for tighter rows
+let charWidth = 12;
+let charHeight = 10;
 
 const loadAsciiFrames = async () => {
     try {
@@ -47,14 +47,14 @@ const drawFrame = () => {
     const ctx = canvas.value.getContext("2d");
     ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
     ctx.font = `${charHeight}px monospace`; 
-    ctx.fillStyle = '#5a1520'
+    ctx.fillStyle = '#d5393c'
     ctx.textBaseline = "top";
 
     const frame = frames[frameIndex];
 
     frame.forEach((line, rowIndex) => {
         [...line].forEach((char, colIndex) => {
-            ctx.fillText(char, colIndex * charWidth * 1.2, rowIndex * charHeight * 0.9); // Add spacing
+            ctx.fillText(char, colIndex * charWidth * 1.2, rowIndex * charHeight * 0.9);
         });
     });
 
@@ -76,8 +76,6 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
     @apply bg-dark
 }
 

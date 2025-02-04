@@ -3,10 +3,12 @@
 
     
     <main class="flex justify-center items-center h-full w-full">
-      <h1 class="text-8xl font-noto font-black text-white">opia</h1>
-      <h1 class=" text-8xl font-noto font-thin text-white">pirc</h1>
+      <div class="flex flex-col justify-center items-center gap-2">
 
-      <AsciiCanvas class="-z-10 absolute"></AsciiCanvas>
+        <MainHeader/>
+
+      </div>
+      <AsciiCanvas class="-z-10 absolute opacity-50 w-full h-[99%] overflow-clip"></AsciiCanvas>
     </main>
   </div>
 </template>
@@ -14,4 +16,13 @@
 <script setup>
 import UpBar from './components/UpBar.vue';
 import AsciiCanvas from './components/AsciiCanvas.vue';
+import MainHeader from './components/MainHeader.vue';
 </script>
+
+<style scoped>
+.specialtext
+{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+</style>
