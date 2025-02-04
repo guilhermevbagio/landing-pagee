@@ -9,7 +9,8 @@ export default {
       fontFamily: {
         'playfair': ['playfair', 'serif'],
         'gasoek': ['GasoekOne', 'sans-serif'],
-        'raleway': ['Raleway', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'milker': ['Milker', 'sans-serif'],
       },
       colors: {
         'bright': '#e0dee1',

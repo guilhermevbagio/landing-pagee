@@ -12,13 +12,13 @@
         font-weight: 500;
         font-style: normal;
     }
-
-    @font-face {
-        font-family: 'raleway';
-        src: url('@/assets/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
-        font-weight: 100 900;
+    @font-face{
+        font-family: 'Milker';
+        src: url('@/assets/Milker/Milker.otf') format('truetype');
+        font-weight: 500;
         font-style: normal;
     }
+
     @font-face {
         font-family: 'poppins';
         src: url('@/assets/Poppins/Poppins-Regular.ttf') format('truetype');
@@ -32,4 +32,6 @@
         font-weight: 100 900;
         font-style: normal;
     }
+
+
 }
