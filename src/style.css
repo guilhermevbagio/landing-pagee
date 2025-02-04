@@ -80,4 +80,10 @@
         font-weight: 500;
         font-style: normal;
     }
+    @font-face {
+        font-family: 'Noto';
+        src: url('@/assets/Noto/NotoSerifHentaigana-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+    }
 }

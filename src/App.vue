@@ -1,13 +1,12 @@
 <template>
   <div class="h-screen w-screen pt-2">
-    <header>
-      
-      <UpBar />
-    </header>
+
     
     <main class="flex justify-center items-center h-full w-full">
+      <h1 class="text-8xl font-noto font-black text-white">opia</h1>
+      <h1 class=" text-8xl font-noto font-thin text-white">pirc</h1>
 
-      <AsciiCanvas class="-z-10 overflow-clip"></AsciiCanvas>
+      <AsciiCanvas class="-z-10 absolute"></AsciiCanvas>
     </main>
   </div>
 </template>

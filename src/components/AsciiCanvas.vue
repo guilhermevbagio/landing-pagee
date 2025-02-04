@@ -1,6 +1,6 @@
 <template>
     <div class="canvas-container">
-        <canvas ref="canvas"></canvas>
+        <canvas ref="canvas" ></canvas>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ let charHeight = 10; // Reduced line height for tighter rows
 
 const loadAsciiFrames = async () => {
     try {
-        const response = await fetch("/src/assets/mar_ascii_frames.json");
+        const response = await fetch("/src/assets/mar_contraste_ascii_frames.json");
         const text = await response.text();
 
         const data = JSON.parse(text);
@@ -46,8 +46,8 @@ const drawFrame = () => {
 
     const ctx = canvas.value.getContext("2d");
     ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
-    ctx.font = `${charHeight}px monospace`; // Keep consistent with charHeight
-    ctx.fillStyle = "white";
+    ctx.font = `${charHeight}px monospace`; 
+    ctx.fillStyle = '#5a1520'
     ctx.textBaseline = "top";
 
     const frame = frames[frameIndex];
@@ -78,7 +78,7 @@ onUnmounted(() => {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: accent;
+    @apply bg-dark
 }
 
 canvas {
