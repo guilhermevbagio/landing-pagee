@@ -1,6 +1,6 @@
 <template>
     <div class="canvas-container">
-        <canvas ref="canvas" ></canvas>
+        <canvas ref="canvas"></canvas>
     </div>
 </template>
 
@@ -34,11 +34,15 @@ const adjustCanvasSize = () => {
     const ctx = canvas.value.getContext("2d");
     const firstFrame = frames[0];
 
-    const frameWidth = firstFrame[0].length * charWidth;
-    const frameHeight = firstFrame.length * charHeight;
+    const screenHeight = window.innerHeight;
+    const frameHeight = firstFrame.length;
+    
+    charHeight = screenHeight / frameHeight;
+    charWidth = charHeight * (firstFrame[0].length / frameHeight);
 
+    const frameWidth = firstFrame[0].length * charWidth;
     canvas.value.width = frameWidth;
-    canvas.value.height = frameHeight;
+    canvas.value.height = screenHeight;
 };
 
 const drawFrame = () => {
@@ -47,14 +51,14 @@ const drawFrame = () => {
     const ctx = canvas.value.getContext("2d");
     ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
     ctx.font = `${charHeight}px monospace`; 
-    ctx.fillStyle = '#d5393c'
+    ctx.fillStyle = '#d5393c';
     ctx.textBaseline = "top";
 
     const frame = frames[frameIndex];
 
     frame.forEach((line, rowIndex) => {
         [...line].forEach((char, colIndex) => {
-            ctx.fillText(char, colIndex * charWidth * 1.2, rowIndex * charHeight * 0.9);
+            ctx.fillText(char, colIndex * charWidth, rowIndex * charHeight);
         });
     });
 
@@ -64,10 +68,12 @@ const drawFrame = () => {
 onMounted(async () => {
     await loadAsciiFrames();
     interval = setInterval(drawFrame, 100);
+    window.addEventListener("resize", adjustCanvasSize);
 });
 
 onUnmounted(() => {
     clearInterval(interval);
+    window.removeEventListener("resize", adjustCanvasSize);
 });
 </script>
 
@@ -76,7 +82,8 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    @apply bg-dark
+    height: 100vh;
+    @apply bg-dark;
 }
 
 canvas {
