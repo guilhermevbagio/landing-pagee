@@ -1,11 +1,16 @@
+<script setup lang="ts">
+import router from '@/router';
+
+</script>
+
 <template>
-  <div class="flex flex-col gap-2 drop-shadow-lg w-[70%] cursor-default select-none">
-    <div class="flex flex-row -mb-2 text-8xl font-milker">
-      <h1 class="-ml-2 text-bright">OPIA</h1>
+  <div class="flex flex-col gap-1 drop-shadow-lg w-[70%] cursor-default select-none">
+    <div class="flex flex-row text-8xl font-milker">
+      <h1 class="-ml-2 mb-2 text-bright">OPIA</h1>
       <h1 class="specialtext md:-ml-2 text-accent">'</h1>
     </div>
     <div class="flex flex-col 2xl:flex-row items-baseline">
-      <h2 class="font-playfair font-thin text-bright text-2xl md:text-4xl ">The Ambiguous Intensity of Eye Contact &nbsp;  </h2>
+      <h2 class="font-playfair font-bold text-bright text-2xl md:text-4xl ">The Ambiguous Intensity of Eye Contact &nbsp;  </h2>
       <a
         target="_blank"
         href="https://www.thedictionaryofobscuresorrows.com/concept/opia"
@@ -23,13 +28,13 @@
       A&nbsp; w e b s i t e&nbsp; f o r&nbsp; guilhermevbagio's&nbsp; p r o j e c t s
     </p>
 
-        <div class="text-xs flex flex-row justify-between md:text-lg mt-2 border-t pt-4 w-full font-poppins border-bright border-opacity-50 text-bright">
-          <button class="button-hover">games ></button>
-          <button class="button-hover">music ></button>
-          <button class="button-hover">art ></button>
-          <button class="button-hover">code ></button>
-          <button class="button-hover">contact ></button>
-        </div>
+        <nav class="text-xs flex flex-row justify-between md:text-lg mt-2 border-t pt-4 w-full font-poppins border-bright border-opacity-50 text-bright">
+          <router-link to="/games" class="button-hover">games ></router-link>
+          <router-link to="/music" class="button-hover">music ></router-link>
+          <router-link to="/art" class="button-hover">art ></router-link>
+          <router-link to="/code" class="button-hover">code ></router-link>
+          <router-link to="/contact" class="button-hover">contact ></router-link>
+        </nav>
   </div>
 </template>
 

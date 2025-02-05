@@ -8,7 +8,6 @@ export default {
     extend: {
       fontFamily: {
         'playfair': ['playfair', 'serif'],
-        'gasoek': ['GasoekOne', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'milker': ['Milker', 'sans-serif'],
       },
