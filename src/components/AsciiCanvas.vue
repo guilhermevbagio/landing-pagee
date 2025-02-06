@@ -83,7 +83,6 @@ onUnmounted(() => {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    @apply bg-dark;
 }
 
 canvas {
