@@ -5,6 +5,12 @@
 
 
 @layer base {
+    .specialtext
+    {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    }
+
     @font-face{
         font-family: 'Milker';
         src: url('@/assets/Milker/Milker.otf') format('truetype');

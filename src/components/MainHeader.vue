@@ -14,7 +14,7 @@ import router from '@/router';
       <a
         target="_blank"
         href="https://www.thedictionaryofobscuresorrows.com/concept/opia"
-        class="text-3xl -my-1 2xl:text-4xl font-playfair italic hover:underline transition-all duration-100 ease-in-out hover:opacity-50 font-thin text-bright opacity-30"
+        class="text-2xl -my-1 2xl:text-4xl font-playfair italic hover:underline transition-all duration-100 ease-in-out hover:opacity-50 font-thin text-bright opacity-30"
       >
         The Dictionary of Obscure Sorrows.
       </a>
@@ -39,11 +39,6 @@ import router from '@/router';
 </template>
 
 <style scoped>
-.specialtext
-{
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-}
 
 .button-hover{
   transition: all 0.1s ease-in-out;
