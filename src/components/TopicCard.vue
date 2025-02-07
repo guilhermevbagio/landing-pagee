@@ -23,4 +23,6 @@ defineProps({
             {{ title }}
         </h1>
     </div>
+    <div class="self-center w-[99%] border-b border-accent -mt-6"></div>
+
 </template>
