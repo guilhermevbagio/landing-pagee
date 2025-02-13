@@ -74,14 +74,14 @@ function typewriter(length, fullText) {
   isTyping = true;
 
   function typingStep() {
-    if (length == fullText.length ) {
+    if (length === fullText.length) {
       isTyping = false;
       return;
     }
 
     text.value = fullText.slice(0, length + 1);
 
-    let timeoutLength  = fullText[length] == '.' ? 20 : 0.2
+    let timeoutLength = fullText[length] === '.' ? 200 : 2;  
 
     timeoutID = setTimeout(() => {
       typewriter(length + 1, fullText);
@@ -90,6 +90,7 @@ function typewriter(length, fullText) {
 
   typingStep();
 }
+
 
 
 </script>
