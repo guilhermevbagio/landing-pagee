@@ -1,6 +1,10 @@
 <script setup>
+import { ref } from 'vue';
 import AsciiCanvas from './AsciiCanvas.vue';
 import TopicCard from './TopicCard.vue';
+
+const name = ref(``);
+const text = ref(``);
 
 defineProps({
     title: {
@@ -12,6 +16,11 @@ defineProps({
         default: false
     }
 })
+
+function setText(namePassed, textPassed){
+  name.value = namePassed;
+  text.value = textPassed;
+}
 
 </script>
 
@@ -35,14 +44,14 @@ defineProps({
         </header>
         <div class="flex flex-row items-start justify-center w-full h-full p-8">
           <div class="flex flex-col gap-2 w-[33%]">
-            <h2 class="text-2xl text-accent font-poppins">December 2024</h2>
-            <p class="text-lg text-bright font-playfair ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h2 class="text-2xl text-accent font-poppins">{{ name }}</h2>
+            <p class="text-lg text-bright font-playfair ">{{ text }}</p>
           </div>
           <div class="flex flex-col gap-8 w-full  pl-8 ml-8 relative">
             <div class="absolute h-screen rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0"></div>
-            <TopicCard title="HARSH. released" big></TopicCard>
-            <TopicCard title="GMTK game jam"></TopicCard>
-            <TopicCard title="Opia pirc is born" big></TopicCard>
+            <TopicCard title="HARSH. released" big @mouseover="setText(`December 2024`, `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cent`)"></TopicCard>
+            <TopicCard title="GMTK game jam" @mouseover="setText(`November 2024`, `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text evertook a galley of type and scrambled it to make a type specimen book. It has survived not only five cent`)"></TopicCard>
+            <TopicCard title="Opia pirc is born" big @mouseover="setText(`October 2024`, `Lo is simply dummy text of the printing and typesetting industry. vertook a galley of type and scrambled it to make a type specimen book. It has survived not only five cent`)"></TopicCard>
 
           </div>
         </div>
