@@ -26,7 +26,7 @@ const props = defineProps({
 
 function setText(namePassed, textPassed) {
     name.value = namePassed;
-    typewriter(0, textPassed)
+    text.value = textPassed;
 }
 
 async function retrieveTimelineContent() {
@@ -59,39 +59,8 @@ function formatDate(dateStr) {
 
 function clear(){
   let message = timelineContent.value.defaultMessage;
-  text.value = ''
   setText(message.name, message.description)
 }
-
-let isTyping = false;
-let timeoutID;
-
-function typewriter(length, fullText) {
-  if (isTyping) {
-    clearTimeout(timeoutID);
-  }
-
-  isTyping = true;
-
-  function typingStep() {
-    if (length === fullText.length) {
-      isTyping = false;
-      return;
-    }
-
-    text.value = fullText.slice(0, length + 1);
-
-    let timeoutLength = fullText[length] === '.' ? 200 : 2;  
-
-    timeoutID = setTimeout(() => {
-      typewriter(length + 1, fullText);
-    }, timeoutLength);
-  }
-
-  typingStep();
-}
-
-
 
 </script>
 
@@ -115,9 +84,18 @@ function typewriter(length, fullText) {
         </header>
         <div class="flex flex-row items-start justify-center w-full h-full p-8">
             <div class="flex flex-col gap-2 w-[33%]">
-                <h2 class="text-2xl text-accent font-poppins">{{ name }}</h2>
-                <p class="text-lg text-bright font-playfair typewriter">{{ text }}</p>
+                <transition name="fade-slide" mode="out-in">
+                    <h2 v-if="name" :key="name" class="text-2xl text-accent font-poppins">
+                        {{ name }}
+                    </h2>
+                </transition>
+                <transition name="fade-slide" mode="out-in">
+                    <p v-if="text" :key="text" class="text-lg text-bright font-playfair typewriter">
+                        {{ text }}
+                    </p>
+                </transition>
             </div>
+
             <div class="w-full pl-8 ml-8 relative">
                 <div class="absolute h-screen rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0"></div>
                 
@@ -139,17 +117,13 @@ function typewriter(length, fullText) {
     @apply hover:opacity-50 text-bright text-lg;
 }
 
-.ascii-gradient {
-    -webkit-mask-image: linear-gradient(to right, 
-        rgba(0, 0, 0, 1) 50%, 
-        rgba(0, 0, 0, 1) 60%, 
-        rgba(0, 0, 0, 0) 100%
-    );
-    mask-image: linear-gradient(to right, 
-        rgba(0, 0, 0, 1) 50%, 
-        rgba(0, 0, 0, 1) 60%, 
-        rgba(0, 0, 0, 0) 100%
-    );
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fade-slide-enter-from, .fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(5px);
 }
 
 </style>
