@@ -24,7 +24,6 @@ defineProps({
              :class="{'border-bright': isHovered}">
             <div v-if="big" class="h-32 w-full overflow-clip relative rounded-sm border mb-4 transition-border"
                  :class="isHovered ? 'border-bright' : 'border-accent'">
-                <AsciiCanvas class="w-full h-full absolute"></AsciiCanvas>
             </div>
             <h1 :class="[ 
                     isHovered ? 'text-bright' : (big ? 'text-accent' : 'text-bright'),

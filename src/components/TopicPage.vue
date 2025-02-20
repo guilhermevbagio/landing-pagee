@@ -1,12 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import TopicCard from './TopicCard.vue';
+import AsciiCanvas from './AsciiCanvas.vue';
 
 const name = ref(``);
 const text = ref(``);
 const timelineContent = ref([]);
 const isLoading = ref(true);
 const NEUTRAL_PATH = '/src/assets/Timeline/';
+
 
 const props = defineProps({
     title: {
@@ -91,11 +93,11 @@ function clear(){
                 </transition>
             </div>
 
-            <div class="w-full pl-8 ml-8 relative h-full ">
+            <div class="w-full pl-8 ml-8 relative h-full">
                 <div class="absolute h-full rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0 mt-2"></div>
                 
                 <div v-if="isLoading" class="text-center text-bright">Loading...</div>
-                <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12">
+                <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12 bg-transparent">
                     <ul class="flex flex-col gap-8">
                         <li v-for="(card, index) in timelineContent.cards" :key="index">
                             <TopicCard 
@@ -136,4 +138,5 @@ div {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 }
+
 </style>
