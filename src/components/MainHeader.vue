@@ -20,7 +20,7 @@ import router from '@/router';
       </a>
     </div>
 
-    <p class="text-sm md:text-lg font-playfair drop-shadow-lg italic bg-black bg-opacity-40 md:bg-opacity-20 text-accent text-pretty">
+    <p class="text-sm md:text-lg font-playfair tracking-wide drop-shadow-lg italic bg-black bg-opacity-50 md:bg-opacity-30 text-accent text-pretty">
       "n. the ambiguous intensity of looking someone in the eye, which can feel simultaneously invasive and vulnerable—their pupils glittering, bottomless and opaque—as if you were peering through a hole in the door of a house, able to tell that there’s someone standing there, but unable to tell if you’re looking in or looking out."
     </p>
 
