@@ -4,8 +4,8 @@ import TopicCard from './TopicCard.vue';
 
 const name = ref(``);
 const text = ref(``);
-const timelineContent = ref([]); // holds the timeline content
-const isLoading = ref(true); // loading state
+const timelineContent = ref([]);
+const isLoading = ref(true);
 const NEUTRAL_PATH = '/src/assets/Timeline/';
 
 const props = defineProps({
@@ -19,7 +19,7 @@ const props = defineProps({
     }
 });
 
- onMounted( async () =>  {
+onMounted( async () =>  {
     await retrieveTimelineContent();
     clear();
 });
@@ -41,31 +41,25 @@ async function retrieveTimelineContent() {
 
 function formatDate(dateStr) {
     const [day, month, year] = dateStr.split('/');
-
     const fullYear = `${year}`;
-
     const date = new Date(fullYear, month - 1, day);
-
     const months = [
         "January", "February", "March", "April", "May", "June", 
         "July", "August", "September", "October", "November", "December"
     ];
-
     const monthName = months[date.getMonth()];
     const yearFull = date.getFullYear();
-
     return `${monthName} ${yearFull}`;
 }
 
 function clear(){
-  let message = timelineContent.value.defaultMessage;
-  setText(message.name, message.description)
+    let message = timelineContent.value.defaultMessage;
+    setText(message.name, message.description)
 }
-
 </script>
 
 <template>
-    <div class="h-screen w-screen">
+    <div class="h-screen w-screen flex flex-col">
         <header class="w-full bg-dark">
             <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-4 border-bright border-opacity-50">
                 <div class="text-bright text-8xl w-[33%] ml-8">
@@ -82,8 +76,9 @@ function clear(){
                 </nav>
             </div>
         </header>
-        <div class="flex flex-row items-start justify-center w-full h-full p-8">
-            <div class="flex flex-col gap-2 w-[33%]">
+
+        <div class="flex flex-row items-start w-full flex-1 p-8 pt-6 pb-0 overflow-hidden">
+            <div class="flex flex-col gap-2 w-[33%] h-full mt-2">
                 <transition name="fade-slide" mode="out-in">
                     <h2 v-if="name" :key="name" class="text-2xl text-accent font-poppins">
                         {{ name }}
@@ -96,15 +91,22 @@ function clear(){
                 </transition>
             </div>
 
-            <div class="w-full pl-8 ml-8 relative">
-                <div class="absolute h-screen rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0"></div>
+            <div class="w-full pl-8 ml-8 relative h-full ">
+                <div class="absolute h-full rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0 mt-2"></div>
                 
                 <div v-if="isLoading" class="text-center text-bright">Loading...</div>
-                <ul v-else class="flex flex-col gap-8">
-                    <li v-for="(card, index) in timelineContent.cards" :key="index">
-                        <TopicCard :title="card.name" :big="card.big" @mouseover="setText(formatDate(card.time), card.description)" @mouseleave="clear()"></TopicCard>
-                    </li>
-                </ul>
+                <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12">
+                    <ul class="flex flex-col gap-8">
+                        <li v-for="(card, index) in timelineContent.cards" :key="index">
+                            <TopicCard 
+                                :title="card.name" 
+                                :big="card.big" 
+                                @mouseover="setText(formatDate(card.time), card.description)" 
+                                @mouseleave="clear()"
+                            />
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -126,4 +128,12 @@ function clear(){
     transform: translateY(5px);
 }
 
+div::-webkit-scrollbar {
+    display: none;
+}
+
+div {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
 </style>

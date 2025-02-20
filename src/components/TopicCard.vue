@@ -18,7 +18,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="cursor-pointer hover:-translate-y-2 transition-all will-change-auto duration-150 ease-in-out"
+    <div class="cursor-pointer hover:-translate-y-2 transition-all will-change-transform duration-150 ease-in-out"
          @mouseover="isHovered = true" @mouseleave="isHovered = false">
         <div class="w-full h-fit border rounded p-4 border-accent transition-border"
              :class="{'border-bright': isHovered}">
