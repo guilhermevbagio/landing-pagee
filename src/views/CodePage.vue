@@ -4,5 +4,5 @@ import TopicPage from '@/components/TopicPage.vue';
 </script>
 
 <template>
-    <TopicPage title="games"></TopicPage>
+    <TopicPage title="code"></TopicPage>
 </template>

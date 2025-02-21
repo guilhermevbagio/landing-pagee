@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         'bright': '#e0dee1',
-        'dark': '#000407',
+        'dark': '#020202',
         'accent' : '#d5393c',
     },
   },

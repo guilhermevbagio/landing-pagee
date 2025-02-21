@@ -10,17 +10,17 @@ import router from '@/router';
       <h1 class="specialtext md:-ml-2 text-accent">'</h1>
     </div>
     <div class="flex flex-col 2xl:flex-row items-baseline">
-      <h2 class="font-playfair font-bold text-bright text-2xl md:text-4xl ">The Ambiguous Intensity of Eye Contact &nbsp;  </h2>
+      <h2 class="font-playfair font-bold text-bright text-xl md:text-2xl ">The Ambiguous Intensity of Eye Contact &nbsp;  </h2>
       <a
         target="_blank"
         href="https://www.thedictionaryofobscuresorrows.com/concept/opia"
-        class="text-2xl -my-1 2xl:text-4xl font-playfair italic hover:underline transition-all duration-100 ease-in-out hover:opacity-50 font-thin text-bright opacity-30"
+        class="text-xl -my-1 2xl:text-2xl font-playfair italic hover:underline transition-all duration-100 ease-in-out hover:opacity-50 font-thin text-bright opacity-30"
       >
         The Dictionary of Obscure Sorrows.
       </a>
     </div>
 
-    <p class="text-sm md:text-lg font-playfair tracking-wide drop-shadow-lg italic bg-black bg-opacity-50 md:bg-opacity-30 text-accent text-pretty">
+    <p class="text-sm md:text-lg font-playfair tracking-wide drop-shadow-lg bg-black bg-opacity-50 md:bg-opacity-30 text-accent text-pretty">
       "n. the ambiguous intensity of looking someone in the eye, which can feel simultaneously invasive and vulnerable—their pupils glittering, bottomless and opaque—as if you were peering through a hole in the door of a house, able to tell that there’s someone standing there, but unable to tell if you’re looking in or looking out."
     </p>
 

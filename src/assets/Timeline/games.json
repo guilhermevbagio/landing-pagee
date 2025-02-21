@@ -8,31 +8,8 @@
             "name" : "Harsh released",
             "time" : "12/12/2024",
             "description" : "In the ever-evolving landscape of digital paradigms, leveraging next-gen synergies with a proactive cross-platform ecosystem can exponentially amplify the synergistic convergence of market-driven thought leadership. By enabling an agile, scalable framework, we can seamlessly optimize the data-driven impact to ensure transformative, 360-degree innovation that disrupts traditional paradigms and pioneers an evolutionary leap in future-proofing solutions.",
-            "big" : true
-        },
-        {
-            "name" : "GMTK game jam",
-            "time" : "12/11/2024",
-            "description" : "Our strategic imperatives focus on dynamically harnessing user-centric methodologies to build a holistic ecosystem that fosters sustainable growth through cross-functional collaboration. By synthesizing intuitive approaches with cutting-edge technologies, we can foster a culture of transformative disruption, driving scalable results while maintaining a competitive advantage in an ever-changing global marketplace. The future of innovation lies in our ability to pivot and adapt in real-time to emerging market trends.",
-            "big" : false
-        },
-        {
-            "name" : "quem amou",
-            "time" : "12/10/2024",
-            "description" : "Our sric methodologies to build a holistic ecosystem that fosters sustainable growth through cross-functional collaboration. By synthesizing intuitive approaches with cutting-edge technologies, we can foster a culture of transformative disruption, driving scalable results while maintaining a competitive advantage in an ever-changing global marketplace. The future of innovation lies in our ability to pivot and adapt in real-time to emerging market trends.",
-            "big" : true
-        },
-        {
-            "name" : "quem amou",
-            "time" : "12/10/2024",
-            "description" : "Our sric methodologies to build a holistic ecosystem that fosters sustainable growth through cross-functional collaboration. By synthesizing intuitive approaches with cutting-edge technologies, we can foster a culture of transformative disruption, driving scalable results while maintaining a competitive advantage in an ever-changing global marketplace. The future of innovation lies in our ability to pivot and adapt in real-time to emerging market trends.",
-            "big" : true
-        },
-        {
-            "name" : "quem amou",
-            "time" : "12/10/2024",
-            "description" : "Our sric methodologies to build a holistic ecosystem that fosters sustainable growth through cross-functional collaboration. By synthesizing intuitive approaches with cutting-edge technologies, we can foster a culture of transformative disruption, driving scalable results while maintaining a competitive advantage in an ever-changing global marketplace. The future of innovation lies in our ability to pivot and adapt in real-time to emerging market trends.",
-            "big" : true
+            "big" : true,
+            "link" : "https://www.google.com"
         }
     ]
 }

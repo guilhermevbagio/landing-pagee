@@ -71,10 +71,12 @@ function clear(){
                 </div>
                 <nav class="flex flex-row justify-end gap-16 px-8 col-start-2 w-full text-2xl">
                     <router-link to="/" class="button-hover">home ></router-link>
-                    <router-link to="/music" class="button-hover">music ></router-link>
-                    <router-link to="/art" class="button-hover">art ></router-link>
-                    <router-link to="/code" class="button-hover">code ></router-link>
-                    <router-link to="/contact" class="button-hover">contact ></router-link>
+                    <router-link v-if="title !== 'music'" to="/music" class="button-hover">music ></router-link>
+                    <router-link v-if="title != 'games'" to="/games" class="button-hover">games ></router-link>
+
+                    <router-link v-if="title != 'art'" to="/art" class="button-hover">art ></router-link>
+                    <router-link v-if="title != 'code'" to="/code" class="button-hover">code ></router-link>
+                    <router-link v-if="title != 'contact'" to="/contact" class="button-hover">contact ></router-link>
                 </nav>
             </div>
         </header>
@@ -96,16 +98,18 @@ function clear(){
             <div class="w-full pl-8 ml-8 relative h-full">
                 <div class="absolute h-full rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0 mt-2"></div>
                 
-                <div v-if="isLoading" class="text-center text-bright">Loading...</div>
+                <div v-if="isLoading" class="text-center text-bright justify-center font-playfair">We're still building down here...</div>
                 <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12 bg-transparent">
                     <ul class="flex flex-col gap-8">
                         <li v-for="(card, index) in timelineContent.cards" :key="index">
-                            <TopicCard 
+                            <a :href="card.link ?? '#'" target="_blank">
+                                <TopicCard 
                                 :title="card.name" 
                                 :big="card.big" 
                                 @mouseover="setText(formatDate(card.time), card.description)" 
                                 @mouseleave="clear()"
-                            />
+                                />
+                            </a>
                         </li>
                     </ul>
                 </div>
