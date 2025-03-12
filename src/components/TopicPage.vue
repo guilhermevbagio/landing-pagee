@@ -51,6 +51,7 @@ function formatDate(dateStr) {
     ];
     const monthName = months[date.getMonth()];
     const yearFull = date.getFullYear();
+    if(!monthName || !yearFull) return dateStr;
     return `${monthName} ${yearFull}`;
 }
 
@@ -89,7 +90,7 @@ function clear(){
                     </h2>
                 </transition>
                 <transition name="fade-slide" mode="out-in">
-                    <p v-if="text" :key="text" class="text-lg text-bright font-playfair typewriter">
+                    <p v-if="text" :key="text" class="2xl:text-lg text-bright font-playfair typewriter">
                         {{ text }}
                     </p>
                 </transition>
@@ -102,7 +103,7 @@ function clear(){
                 <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12 bg-transparent">
                     <ul class="flex flex-col gap-8">
                         <li v-for="(card, index) in timelineContent.cards" :key="index">
-                            <a :href="card.link ?? '#'" target="_blank">
+                            <a v-if="card.link" :href="card.link" target="_blank">
                                 <TopicCard 
                                 :title="card.name" 
                                 :big="card.big" 
@@ -110,6 +111,14 @@ function clear(){
                                 @mouseleave="clear()"
                                 />
                             </a>
+                            <div v-else >
+                                <TopicCard 
+                                :title="card.name" 
+                                :big="card.big" 
+                                @mouseover="setText(formatDate(card.time), card.description)" 
+                                @mouseleave="clear()"
+                                />
+                            </div>
                         </li>
                     </ul>
                 </div>

@@ -1,15 +1,36 @@
 {
     "defaultMessage" : {
-        "name" : "Projects as opiapirc",
-        "description" : "Enrolled in gamedev since 2019"
+        "name" : "The whole story",
+        "description" : "Some time around 2019, a young me found himself frozen upon a screen. \"Maybe I can make that\" - a thought engraved in his mind that would eventually transform to \"Maybe I should make that\". Soon to become the unstoppable urge to make my ideas speak for themselves, to make my hobbies free to interact and coalesce on something someone could, someday, stumble upon and hopefully think \"Hey, this is kinda cool\". Here's that story."
     },
     "cards" : [
         {
             "name" : "Harsh released",
             "time" : "12/12/2024",
-            "description" : "In the ever-evolving landscape of digital paradigms, leveraging next-gen synergies with a proactive cross-platform ecosystem can exponentially amplify the synergistic convergence of market-driven thought leadership. By enabling an agile, scalable framework, we can seamlessly optimize the data-driven impact to ensure transformative, 360-degree innovation that disrupts traditional paradigms and pioneers an evolutionary leap in future-proofing solutions.",
+            "description" : "",
             "big" : true,
             "link" : "https://www.google.com"
+        },
+        {
+            "name" : "The game jam era",
+            "time" : "Around 2019",
+            "description" : "Then taking Unity as my main weapon, itch.io became my arena: every jam that came to my attention was a new opportunity to sharpen that dull sword I decided -perhaps insisted- to carry around. In a single week or weekend i could exchange my sleep points for that forbidden C# knowledge. In my old dashboard are the remnants of such glorious battles, raising themselves from the mist of all the ones that went wrong. Some solo projects were born at that time but couldn't face the heavy hammer of time.",
+            "big" : false,
+            "link" : "https://www.itch.io/EhOViana"
+        },
+        {
+            "name" : "The viking game",
+            "time" : "Early 2019",
+            "description" : "After dropping raw C++, Game Maker Studio 2 seemed a great way to finally make something my friends could struggle a little bit to solve, but my eyes quickly gave into amazement seeing I could actually make a giant game myself, about vikings! with a thousand systems! with a hundred thousand animations!  -I actually couldn't. After some weeks GameMaker2 told me it had a sprite limit, the game was dumped and those friends never got to play anything I made.",
+            "big" : false,
+            "link" : ""
+        },
+        {
+            "name" : "The file system puzzle",
+            "time" : "Early 2019",
+            "description" : "While trying to set up a challenge for my friend at school, some file-password puzzles got my hands dirty in making something with tech, rather than taking something made with tech. The puzzle actually never worked, so i shove my hands even deeper into some basic C++ to try and make something of that kind.",
+            "big" : false,
+            "link" : ""
         }
     ]
 }
