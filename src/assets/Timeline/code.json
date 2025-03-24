@@ -1,0 +1,15 @@
+{
+    "defaultMessage" : {
+        "name" : "Page under construction",
+        "description" : "Come back someday."
+    },
+    "cards" : [
+        {
+            "name" : "Work in progress...",
+            "time" : "Don't hurry!",
+            "description" : "I'm still working on this page. It's a busy life, sorry.",
+            "big" : false,
+            "link" : ""
+        }
+    ]
+}

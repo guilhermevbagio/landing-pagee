@@ -72,12 +72,42 @@ function clear(){
                 </div>
                 <nav class="flex flex-row justify-end gap-16 px-8 col-start-2 w-full text-2xl">
                     <router-link to="/" class="button-hover">home ></router-link>
-                    <router-link v-if="title !== 'music'" to="/music" class="button-hover">music ></router-link>
-                    <router-link v-if="title != 'games'" to="/games" class="button-hover">games ></router-link>
+                    <router-link 
+                        :to="title === 'music' ? '' : '/music'" 
+                        class="button-hover" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'music' }"
+                    >
+                        music >
+                    </router-link>
+                    <router-link 
+                        :to="title === 'games' ? '' : '/games'" 
+                        class="button-hover" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'games' }"
+                    >
+                        games >
+                    </router-link>
+                    <router-link 
+                        :to="title === 'art' ? '' : '/art'" 
+                        class="button-hover" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'art' }"
+                    >
+                        art >
+                    </router-link>
+                    <router-link 
+                        :to="title === 'code' ? '' : '/code'" 
+                        class="button-hover disabled:underline disabled:opacity-50" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'code' }"
+                    >
+                        code >
+                    </router-link>
+                    <router-link 
+                        :to="title === 'contact' ? '' : '/contact'" 
+                        class="button-hover" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'contact' }"
+                    >
+                        contact >
+                    </router-link>
 
-                    <router-link v-if="title != 'art'" to="/art" class="button-hover">art ></router-link>
-                    <router-link v-if="title != 'code'" to="/code" class="button-hover">code ></router-link>
-                    <router-link v-if="title != 'contact'" to="/contact" class="button-hover">contact ></router-link>
                 </nav>
             </div>
         </header>
