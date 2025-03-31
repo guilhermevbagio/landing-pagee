@@ -73,18 +73,18 @@ function clear(){
                 <nav class="flex flex-row justify-end gap-16 px-8 col-start-2 w-full text-2xl">
                     <router-link to="/" class="button-hover">home ></router-link>
                     <router-link 
+                        :to="title === 'games' ? '' : '/games'" 
+                        class="button-hover" 
+                        :class="{ 'pointer-events-none opacity-50': title === 'games' }"
+                        >
+                        games >
+                    </router-link>
+                    <router-link 
                         :to="title === 'music' ? '' : '/music'" 
                         class="button-hover" 
                         :class="{ 'pointer-events-none opacity-50': title === 'music' }"
                     >
                         music >
-                    </router-link>
-                    <router-link 
-                        :to="title === 'games' ? '' : '/games'" 
-                        class="button-hover" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'games' }"
-                    >
-                        games >
                     </router-link>
                     <router-link 
                         :to="title === 'art' ? '' : '/art'" 
@@ -99,13 +99,6 @@ function clear(){
                         :class="{ 'pointer-events-none opacity-50': title === 'code' }"
                     >
                         code >
-                    </router-link>
-                    <router-link 
-                        :to="title === 'contact' ? '' : '/contact'" 
-                        class="button-hover" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'contact' }"
-                    >
-                        contact >
                     </router-link>
 
                 </nav>
@@ -144,6 +137,7 @@ function clear(){
                             <div v-else >
                                 <TopicCard 
                                 :title="card.name" 
+                                :linked="card.link != ''"
                                 :big="card.big" 
                                 @mouseover="setText(formatDate(card.time), card.description)" 
                                 @mouseleave="clear()"
