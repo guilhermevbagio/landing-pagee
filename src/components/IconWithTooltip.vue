@@ -1,6 +1,6 @@
 <template>
      <a 
-        class="cursor-pointer relative flex flex-row gap-4 items-center transition-all duration-150 ease-in-out hover:text-accent hover:-translate-y-1" @mouseenter="shown = true" @mouseleave="shown = false"
+        class="cursor-pointer relative flex select-none flex-row gap-4 items-center transition-all duration-150 ease-in-out hover:text-accent hover:-translate-y-1" @mouseenter="shown = true" @mouseleave="shown = false"
         :href="link"
         target="_blank"
       >
