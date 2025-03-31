@@ -66,7 +66,7 @@ function clear(){
         <header class="w-full bg-dark">
             <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-4 border-bright border-opacity-50">
                 <div class="text-bright text-8xl w-[33%] ml-8">
-                    <h1 class="font-milker specialtext">
+                    <h1 class="font-milker specialtext select-none">
                         {{ title }}<strong class="font-normal text-accent">'</strong>
                     </h1>
                 </div>
