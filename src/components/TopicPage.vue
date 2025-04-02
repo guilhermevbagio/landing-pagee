@@ -1,13 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import TopicCard from './TopicCard.vue';
-import AsciiCanvas from './AsciiCanvas.vue';
 
 const name = ref(``);
 const text = ref(``);
 const timelineContent = ref([]);
 const isLoading = ref(true);
-const NEUTRAL_PATH = '/src/assets/Timeline/';
+const NEUTRAL_PATH = '/Timeline/';
 
 
 const props = defineProps({

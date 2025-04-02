@@ -16,7 +16,7 @@ let charHeight = 10;
 
 const loadAsciiFrames = async () => {
     try {
-        const response = await fetch("/src/assets/mar_contraste_ascii_frames.json");
+        const response = await fetch("/mar_contraste_ascii_frames.json");
         const text = await response.text();
 
         const data = JSON.parse(text);
