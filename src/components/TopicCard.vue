@@ -47,7 +47,7 @@ defineProps({
              <img src="/images/crown.png" />
          </div>
         <div class="relative h-full w-full border rounded p-4 pb-1 border-accent transition-border overflow-clip"
-            :class="{'border-bright': isHovered, 'shadow-[0px_0px_25px_1px_rgba(213,57,60,0.3)]' : crowned }"
+            :class="{'border-bright': isHovered, 'shadow-[0px_0px_28px_0px_rgba(213,57,60,0.3)]' : crowned }"
         >
             <div v-if="big" class="h-[50%] w-full overflow-clip relative rounded-sm border mb-4 transition-border"
                  :class="isHovered ? 'border-bright' : 'border-accent'">
