@@ -34,7 +34,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="cursor-pointer h-full hover:-translate-y-2 transition-all will-change-transform duration-150 ease-in-out"
+    <div class="h-48 md:h-64 min-h-full cursor-pointer hover:-translate-y-2 transition-all will-change-transform duration-150 ease-in-out"
         @mouseover="isHovered = true" @mouseleave="isHovered = false"
         >
         <div class="h-full w-full border rounded p-4 pb-1 border-accent transition-border"
@@ -43,10 +43,9 @@ defineProps({
             <div v-if="big" class="h-[50%] w-full overflow-clip relative rounded-sm border mb-4 transition-border"
                  :class="isHovered ? 'border-bright' : 'border-accent'">
             </div>
-            <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md w-full" :class="[ 
+            <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md w-full font-milker" :class="[ 
                     isHovered ? 'text-bright' : (!big ? 'text-accent' : 'text-bright'),
-                    'font-milker',
-                    big ? 'text-4xl leading-8 ' : 'text-lg leading-1'
+                    big ? 'text-2xl leading-5 md:text-4xl md:leading-8 ' : 'md:text-lg md:leading-1'
                 ]">
                 {{ title }} 
                 <div v-if="linked">
@@ -54,7 +53,7 @@ defineProps({
                 </div>
             </h1>
             <div v-if="time" :class=" isHovered ? 'text-bright' : 'text-accent'" class="text-sm font-light font-poppins pt-1"> {{ time }} </div>
-            <div v-if="text" class="min-h-48 h-48 py-2 font-playfair" :class=" isHovered ? 'text-bright' : 'text-accent' "> {{ text }} </div>
+            <div v-if="text" class="min-h-48 h-48 py-2 text-sm md:text-base font-playfair" :class=" isHovered ? 'text-bright' : 'text-accent' "> {{ text }} </div>
         </div>
         <div v-if="linked" class="w-full px-4 mt-2 pb-0">
             <div  class="line-appear border-b border-accent" :class="isHovered ? 'border-opacity-100 w-full' : 'border-opacity-0 w-0 '"></div>
