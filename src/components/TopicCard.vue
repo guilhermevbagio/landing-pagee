@@ -37,21 +37,23 @@ defineProps({
     <div class="cursor-pointer h-full hover:-translate-y-2 transition-all will-change-transform duration-150 ease-in-out"
         @mouseover="isHovered = true" @mouseleave="isHovered = false"
         >
-        <div class="h-full w-full border rounded p-4 pb-2 border-accent transition-border"
-            :class="{'border-bright': isHovered}"
+        <div class="h-full w-full border rounded p-4 pb-1 border-accent transition-border"
+            :class="{'border-bright': isHovered }"
         >
-            <div v-if="big" class="h-32 w-full overflow-clip relative rounded-sm border mb-4 transition-border"
+            <div v-if="big" class="h-[50%] w-full overflow-clip relative rounded-sm border mb-4 transition-border"
                  :class="isHovered ? 'border-bright' : 'border-accent'">
             </div>
-            <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md leading-8" :class="[ 
+            <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md w-full" :class="[ 
                     isHovered ? 'text-bright' : (!big ? 'text-accent' : 'text-bright'),
                     'font-milker',
-                    big ? 'text-4xl' : 'text-lg'
+                    big ? 'text-4xl leading-8 ' : 'text-lg leading-1'
                 ]">
                 {{ title }} 
-                <svg v-if="linked" xmlns="http://www.w3.org/2000/svg" :width="big ? 24 : 20" :height="big ? 24 : 20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                <div v-if="linked">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24 " height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </div>
             </h1>
-            <div v-if="time" :class=" isHovered ? 'text-bright' : 'text-accent'" class="text-sm font-light font-poppins"> {{ time }} </div>
+            <div v-if="time" :class=" isHovered ? 'text-bright' : 'text-accent'" class="text-sm font-light font-poppins pt-1"> {{ time }} </div>
             <div v-if="text" class="min-h-48 h-48 py-2 font-playfair" :class=" isHovered ? 'text-bright' : 'text-accent' "> {{ text }} </div>
         </div>
         <div v-if="linked" class="w-full px-4 mt-2 pb-0">
