@@ -15,7 +15,9 @@
             "time" : "12/12/2024",
             "description" : "",
             "big" : true,
-            "link" : "https://www.google.com"
+            "link" : "https://www.google.com",
+            "imagePath" : "harsh.png"
+
         },
         {
             "name" : "the LOBSTER WARFARE PROGRAM",
@@ -29,7 +31,8 @@
             "time" : "February 2024",
             "description" : "",
             "big" : true,
-            "link" : "https://opiapirc.itch.io/aisles-of-disorder"
+            "link" : "https://opiapirc.itch.io/aisles-of-disorder",
+            "imagePath" : "aisles-of-disorder.png"
         },
         {
             "name" : "Opia Pirc is born",
@@ -41,7 +44,7 @@
         {
             "name" : "The game jam era",
             "time" : "Around 2019",
-            "description" : "My old itch.io, when Unity became my main skill and was sharpened through many game jams. Here lie some kinda cool projects of my younger self. Everything always was entirely self-produced.",
+            "description" : "My old itch.io, here lie some kinda cool projects of my younger self. Everything always was entirely self-produced and made with Unity.",
             "big" : false,
             "link" : "https://www.itch.io/EhOViana"
         },

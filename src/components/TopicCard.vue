@@ -42,6 +42,7 @@ defineProps({
         >
             <div v-if="big" class="h-[50%] w-full overflow-clip relative rounded-sm border mb-4 transition-border"
                  :class="isHovered ? 'border-bright' : 'border-accent'">
+                 <img class="h-full w-full object-cover" :src="'/images/' + imagePath" />
             </div>
             <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md w-full font-milker" :class="[ 
                     isHovered ? 'text-bright' : (!big ? 'text-accent' : 'text-bright'),
