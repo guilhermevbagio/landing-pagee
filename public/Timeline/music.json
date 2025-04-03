@@ -10,6 +10,35 @@
             "description" : "I'm still working on this page.",
             "big" : false,
             "link" : ""
+        },
+        {
+            "name" : "HARSH OST.",
+            "time" : "September 2023",
+            "big" : true,
+            "link" : "https://www.youtube.com/watch?v=ByjaYzDPYk8&list=OLAK5uy_nhAKmnL1JkBsG-rMcTzZq2tAKe2gBh010&index=1",
+            "imagePath" : "harsh.png",
+            "crowned" : true
+        },
+        {
+            "name" : "Hífen",
+            "time" : "September 2023",
+            "description" : "Producer",
+            "big" : false,
+            "link" : "https://www.youtube.com/watch?v=popmjg_lc_E"
+        },
+        {
+            "name" : "Do Breviário Arcano",
+            "time" : "August 2023",
+            "description" : "Producer",
+            "big" : false,
+            "link" : "https://www.youtube.com/watch?v=Q-3VUVkQV-0"
+        },
+        {
+            "name" : "O Pior dos Origamis",
+            "time" : "August 2022",
+            "description" : "Producer",
+            "big" : false,
+            "link" : "https://www.youtube.com/watch?v=7PSNoqt4EDA"
         }
     ]
 }

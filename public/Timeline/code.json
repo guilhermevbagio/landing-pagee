@@ -10,6 +10,48 @@
             "description" : "I'm still working on this page.",
             "big" : false,
             "link" : ""
+        },
+        {
+            "name" : "Those games",
+            "time" : "Many times",
+            "description" : "I also made those games right there. Check'em out!",
+            "big" : false,
+            "link" : ""
+        },
+        {
+            "name" : "Back End Developer",
+            "time" : "March 2025",
+            "description" : "Back-End developer at Secretaria do Estado da Fazenda (State Department of Finance - SEFAZ-SE).",
+            "big" : false,
+            "link" : ""
+        },
+        {
+            "name" : "This website",
+            "time" : "March 2025",
+            "description" : "I made this!",
+            "big" : false,
+            "link" : ""
+        },
+        {
+            "name" : "Test Driven Development",
+            "time" : "March 2025",
+            "description" : "TDD certificate from Institute of Technology and Aeronautics (ITA).",
+            "big" : false,
+            "link" : "https://www.coursera.org/account/accomplishments/verify/TRK5F8TKXPDN"
+        },
+        {
+            "name" : "Front End Developer",
+            "time" : "January 2025",
+            "description" : "Front-End developer and UX/UI designer at Aracaju's General Attorney's Office (PGM-AJU). Vue.js and TailwindCSS.",
+            "big" : false,
+            "link" : ""
+        },
+        {
+            "name" : "Web Dev Internship",
+            "time" : "July 2024",
+            "description" : "Front-End and UX/UI design internship at Aracaju's General Attorney's Office (PGM-AJU).  Vue.js and TailwindCSS.",
+            "big" : false,
+            "link" : ""
         }
     ]
 }

@@ -113,6 +113,7 @@ function clear(){
                     :text="card.description"
                     :image-path="card.imagePath"
                     :big="card.big" 
+                    :crowned="card.crowned"
                     @mouseover="setText(formatDate(card.time), card.description)" 
                     @mouseleave="clear()"
                     />
@@ -125,6 +126,7 @@ function clear(){
                     :text="card.description"
                     :image-path="card.imagePath"
                     :big="card.big" 
+                    :crowned="card.crowned"
                     @mouseover="setText(formatDate(card.time), card.description)" 
                     @mouseleave="clear()"
                     />
