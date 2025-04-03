@@ -103,7 +103,7 @@ function clear(){
             </nav>
         </header>
 
-        <ul class="grid md:grid-cols-4 gap-8 pb-10">
+        <ul class="grid md:grid-cols-4 2xl:grid-cols-5 gap-8 pb-10">
             <li v-for="(card, index) in timelineContent.cards" class="*:h-48 md:*:h-64 *:min-h-full" :key="index">
                 <a v-if="card.link" :href="card.link" target="_blank">
                     <TopicCard 
