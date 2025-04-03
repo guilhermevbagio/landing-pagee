@@ -62,7 +62,7 @@ function clear(){
 
 <template>
     <!--TODO: CROSSPOLINATION PAGE - all my stuff together with a pretty crosspolination quote-->
-    <div class="h-screen w-screen px-10 md:px-20 overflow-x-hidden flex flex-col">
+    <div class="h-screen w-screen px-10 md:px-20 overflow-x-clip overflow-y-auto flex flex-col">
         <header class="w-full mb-20 bg-dark">
             <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-2 border-bright border-opacity-50">
                 <div class="text-bright text-center md:text-start w-full text-6xl md:text-8xl py-2 md:w-[33%]">
