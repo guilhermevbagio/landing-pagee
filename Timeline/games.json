@@ -12,12 +12,12 @@
         },
         {
             "name" : "Harsh. released",
-            "time" : "12/12/2024",
+            "time" : "October 2024",
             "description" : "",
             "big" : true,
             "link" : "https://store.steampowered.com/app/2807540/HARSH/",
-            "imagePath" : "harsh.png"
-
+            "imagePath" : "harsh.png",
+            "crowned" : true
         },
         {
             "name" : "the LOBSTER WARFARE PROGRAM",
