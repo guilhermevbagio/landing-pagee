@@ -5,30 +5,57 @@
     },
     "cards" : [
         {
-            "name" : "Harsh released",
+            "name" : "???",
+            "time" : "...",
+            "description" : "Perhaps...?",
+            "big" : false
+        },
+        {
+            "name" : "Harsh. released",
             "time" : "12/12/2024",
             "description" : "",
             "big" : true,
             "link" : "https://www.google.com"
         },
         {
+            "name" : "the LOBSTER WARFARE PROGRAM",
+            "time" : "October 2024",
+            "description" : "Another game jam project.",
+            "big" : false,
+            "link" : "https://opiapirc.itch.io/lobsterwarfareprogram"
+        },
+        {
+            "name" : "Aisles of Disorder",
+            "time" : "February 2024",
+            "description" : "",
+            "big" : true,
+            "link" : "https://opiapirc.itch.io/aisles-of-disorder"
+        },
+        {
+            "name" : "Opia Pirc is born",
+            "time" : "February 2024",
+            "description" : "In february 2024, the development of HARSH. is paused for some game jams that I couldn't help but attend, this is the birth of Opia Pirc.",
+            "big" : false,
+            "link" : "https://opiapirc.itch.io"
+        },
+        {
             "name" : "The game jam era",
             "time" : "Around 2019",
-            "description" : "",
+            "description" : "My old itch.io, when Unity became my main skill and was sharpened through many game jams. Here lie some kinda cool projects of my younger self. Everything always was entirely self-produced.",
             "big" : false,
             "link" : "https://www.itch.io/EhOViana"
         },
         {
             "name" : "The viking game",
             "time" : "Early 2019",
-            "description" : "",
+            "description" : "The file puzzle ideia made me consider picking an engine up and making a real game, this is where the journey starts, a game (never) made with GameMaker Studio 2 - also lost media.",
             "big" : false,
             "link" : ""
         },
         {
             "name" : "The file sys puzzle",
             "time" : "Early 2019",
-            "description" : "The first time i ever made something resembling code was trying to make a puzzle my friends at school couldn't beat only using .txt files, folders and passwords. It probably didn't work but it's lost media now.",
+            "description" : "The first time I ever made anything resembling code: trying to make a puzzle my friends at school couldn't beat (using txt files, folders and passwords). It probably didn't work and it's lost media now.",
             "big" : false,
             "link" : ""
         }
