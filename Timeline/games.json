@@ -15,7 +15,7 @@
             "time" : "12/12/2024",
             "description" : "",
             "big" : true,
-            "link" : "https://www.google.com",
+            "link" : "https://store.steampowered.com/app/2807540/HARSH/",
             "imagePath" : "harsh.png"
 
         },
@@ -46,7 +46,7 @@
             "time" : "Around 2019",
             "description" : "My old itch.io, here lie some kinda cool projects of my younger self. Everything always was entirely self-produced and made with Unity.",
             "big" : false,
-            "link" : "https://www.itch.io/EhOViana"
+            "link" : "https://ehoviana.itch.io"
         },
         {
             "name" : "The viking game",
