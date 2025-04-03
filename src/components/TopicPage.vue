@@ -62,7 +62,7 @@ function clear(){
 
 <template>
     <!--TODO: CROSSPOLINATION PAGE - all my stuff together with a pretty crosspolination quote-->
-    <div class="h-screen w-screen px-10 md:px-20 flex flex-col">
+    <div class="h-screen w-screen px-10 md:px-20 overflow-x-hidden flex flex-col">
         <header class="w-full mb-20 bg-dark">
             <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-2 border-bright border-opacity-50">
                 <div class="text-bright text-center md:text-start w-full text-6xl md:text-8xl py-2 md:w-[33%]">
@@ -71,7 +71,7 @@ function clear(){
                     </h1>
                 </div>
             </div>
-            <nav class="flex flex-row justify-end gap-8 md:gap-16 pt-2 col-start-2 w-full">
+            <nav class="flex flex-row justify-end gap-8 md:gap-16 pt-2 col-start-2 w-full *:select-none">
                 <router-link to="/" class="button-hover">home</router-link>
                 <router-link 
                     :to="title === 'games' ? '' : '/games'" 
