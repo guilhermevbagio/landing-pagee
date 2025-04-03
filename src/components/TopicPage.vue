@@ -61,92 +61,74 @@ function clear(){
 </script>
 
 <template>
-    <div class="h-screen w-screen flex flex-col">
-        <header class="w-full bg-dark">
-            <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-4 border-bright border-opacity-50">
-                <div class="text-bright text-8xl w-[33%] ml-8">
-                    <h1 class="font-milker specialtext select-none">
-                        {{ title }}<strong class="font-normal text-accent">'</strong>
+    <div class="h-screen w-screen px-20 flex flex-col">
+        <header class="w-full mb-20 bg-dark">
+            <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-2 border-bright border-opacity-50">
+                <div class="text-bright text-8xl w-[33%]">
+                    <h1 class="font-milker select-none">
+                        {{ title }}<strong class="font-normal specialtext text-accent">'</strong>
                     </h1>
                 </div>
-                <nav class="flex flex-row justify-end gap-16 px-8 col-start-2 w-full text-2xl">
-                    <router-link to="/" class="button-hover">home ></router-link>
-                    <router-link 
-                        :to="title === 'games' ? '' : '/games'" 
-                        class="button-hover" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'games' }"
-                        >
-                        games >
-                    </router-link>
-                    <router-link 
-                        :to="title === 'music' ? '' : '/music'" 
-                        class="button-hover" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'music' }"
-                    >
-                        music >
-                    </router-link>
-                    <router-link 
-                        :to="title === 'art' ? '' : '/art'" 
-                        class="button-hover" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'art' }"
-                    >
-                        art >
-                    </router-link>
-                    <router-link 
-                        :to="title === 'code' ? '' : '/code'" 
-                        class="button-hover disabled:underline disabled:opacity-50" 
-                        :class="{ 'pointer-events-none opacity-50': title === 'code' }"
-                    >
-                        code >
-                    </router-link>
-
-                </nav>
             </div>
+            <nav class="flex flex-row justify-end gap-16 pt-2 col-start-2 w-full text-2xl">
+                <router-link to="/" class="button-hover">home ></router-link>
+                <router-link 
+                    :to="title === 'games' ? '' : '/games'" 
+                    class="button-hover" 
+                    :class="{ 'pointer-events-none !text-accent': title === 'games' }"
+                    >
+                    games >
+                </router-link>
+                <router-link 
+                    :to="title === 'music' ? '' : '/music'" 
+                    class="button-hover" 
+                    :class="{ 'pointer-events-none !text-accent': title === 'music' }"
+                >
+                    music >
+                </router-link>
+                <router-link 
+                    :to="title === 'art' ? '' : '/art'" 
+                    class="button-hover" 
+                    :class="{ 'pointer-events-none !text-accent': title === 'art' }"
+                >
+                    art >
+                </router-link>
+                <router-link 
+                    :to="title === 'code' ? '' : '/code'" 
+                    class="button-hover" 
+                    :class="{ 'pointer-events-none !text-accent': title === 'code' }"
+                >
+                    code >
+                </router-link>
+            </nav>
         </header>
 
-        <div class="flex flex-row items-start w-full flex-1 p-8 pt-6 pb-0 overflow-hidden">
-            <div class="flex flex-col gap-2 w-[33%] h-full mt-2">
-                <transition name="fade-slide" mode="out-in">
-                    <h2 v-if="name" :key="name" class="text-2xl text-accent font-poppins">
-                        {{ name }}
-                    </h2>
-                </transition>
-                <transition name="fade-slide" mode="out-in">
-                    <p v-if="text" :key="text" class="2xl:text-lg text-bright font-playfair typewriter">
-                        {{ text }}
-                    </p>
-                </transition>
-            </div>
-
-            <div class="w-full pl-8 ml-8 relative h-full">
-                <div class="absolute h-full rounded border border-accent w-2 rounded-b-none border-b-0 -z-10 left-0 mt-2"></div>
-                
-                <div v-if="isLoading" class="text-center text-bright justify-center font-playfair">We're still building down here...</div>
-                <div class="h-full overflow-y-auto overflow-x-visible pr-4 pt-2 pb-12 bg-transparent">
-                    <ul class="flex flex-col gap-8">
-                        <li v-for="(card, index) in timelineContent.cards" :key="index">
-                            <a v-if="card.link" :href="card.link" target="_blank">
-                                <TopicCard 
-                                :title="card.name" 
-                                :big="card.big" 
-                                @mouseover="setText(formatDate(card.time), card.description)" 
-                                @mouseleave="clear()"
-                                />
-                            </a>
-                            <div v-else >
-                                <TopicCard 
-                                :title="card.name" 
-                                :linked="card.link != ''"
-                                :big="card.big" 
-                                @mouseover="setText(formatDate(card.time), card.description)" 
-                                @mouseleave="clear()"
-                                />
-                            </div>
-                        </li>
-                    </ul>
+        <ul class="grid grid-cols-4  gap-8">
+            <li v-for="(card, index) in timelineContent.cards" class="*:h-64 *:min-h-full" :key="index">
+                <a v-if="card.link" :href="card.link" target="_blank">
+                    <TopicCard 
+                    :title="card.name" 
+                    :time="card.time"
+                    :linked="true"
+                    :text="card.description"
+                    :big="card.big" 
+                    @mouseover="setText(formatDate(card.time), card.description)" 
+                    @mouseleave="clear()"
+                    />
+                </a>
+                <div v-else>
+                    <TopicCard 
+                    :title="card.name" 
+                    :time="card.time"
+                    :linked="false"
+                    :text="card.description"
+                    :big="card.big" 
+                    @mouseover="setText(formatDate(card.time), card.description)" 
+                    @mouseleave="clear()"
+                    />
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -154,7 +136,7 @@ function clear(){
 .button-hover {
     transition: all 0.1s ease-in-out;
     cursor: pointer;
-    @apply hover:opacity-50 text-bright text-lg;
+    @apply hover:opacity-50 text-bright text-lg font-poppins;
 }
 
 .fade-slide-enter-active, .fade-slide-leave-active {

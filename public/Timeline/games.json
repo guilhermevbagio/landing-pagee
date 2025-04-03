@@ -14,21 +14,21 @@
         {
             "name" : "The game jam era",
             "time" : "Around 2019",
-            "description" : "Then taking Unity as my main weapon, itch.io became my arena: every jam that came to my attention was a new opportunity to sharpen that dull sword I decided -perhaps insisted- to carry around. In a single week or weekend i could exchange my sleep points for that forbidden C# knowledge. In my old dashboard are the remnants of such glorious battles, raising themselves from the mist of all the ones that went wrong. Some solo projects were born at that time but couldn't face the heavy hammer of time.",
+            "description" : "",
             "big" : false,
             "link" : "https://www.itch.io/EhOViana"
         },
         {
             "name" : "The viking game",
             "time" : "Early 2019",
-            "description" : "After dropping raw C++, Game Maker Studio 2 seemed a great way to finally make something my friends could struggle a little bit to solve, but my eyes quickly gave into amazement seeing I could actually make a giant game myself, about vikings! with a thousand systems! with a hundred thousand animations!  -I actually couldn't. After some weeks GameMaker2 told me it had a sprite limit, the game was dumped and those friends never got to play anything I made.",
+            "description" : "",
             "big" : false,
             "link" : ""
         },
         {
-            "name" : "The file system puzzle",
+            "name" : "The file sys puzzle",
             "time" : "Early 2019",
-            "description" : "While trying to set up a challenge for my friend at school, some file-password puzzles got my hands dirty in making something with tech, rather than taking something made with tech. The puzzle actually never worked, so i shove my hands even deeper into some basic C++ to try and make something of that kind.",
+            "description" : "The first time i ever made something resembling code was trying to make a puzzle my friends at school couldn't beat only using .txt files, folders and passwords. It probably didn't work but it's lost media now.",
             "big" : false,
             "link" : ""
         }
