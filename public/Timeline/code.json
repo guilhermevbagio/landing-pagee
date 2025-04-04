@@ -5,13 +5,6 @@
     },
     "cards" : [
         {
-            "name" : "Work in progress...",
-            "time" : "Don't hurry!",
-            "description" : "I'm still working on this page.",
-            "big" : false,
-            "link" : ""
-        },
-        {
             "name" : "Those games",
             "time" : "Many times",
             "description" : "I also made those games right there. Check'em out!",
@@ -45,6 +38,13 @@
             "description" : "Front-End developer and UX/UI designer at Aracaju's General Attorney's Office (PGM-AJU). Vue.js and TailwindCSS.",
             "big" : false,
             "link" : ""
+        },
+        {
+            "name" : "ColorRage",
+            "time" : "January 2025",
+            "description" : "A web color manipulation tool. Vue.js and TailwindCSS.",
+            "big" : false,
+            "link" : "https://guilhermevbagio.github.io/colorrage/"
         },
         {
             "name" : "Web Dev Internship",

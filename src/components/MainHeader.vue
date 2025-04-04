@@ -21,9 +21,13 @@
       "n. the ambiguous intensity of looking someone in the eye, which can feel simultaneously invasive and vulnerable—their pupils glittering, bottomless and opaque—as if you were peering through a hole in the door of a house, able to tell that there’s someone standing there, but unable to tell if you’re looking in or looking out."
     </p>
     
-    <p class=" md:text-2xl font-poppins text-bright w-full text-justify">
-      A&nbsp; w e b s i t e&nbsp; f o r&nbsp; guilhermevbagio's&nbsp; p r o j e c t s
-    </p>
+    <div class=" md:text-2xl font-poppins text-bright w-full text-justify flex flex-row">
+      A&nbsp; w e b s i t e&nbsp; f o r&nbsp; 
+     
+      <p class="animate-drop-shadow-move">guilhermevbagio's</p>
+     
+      &nbsp; p r o j e c t s
+    </div>
     
     <nav class="text-xs flex flex-row justify-around md:text-lg mt-2 border-t pt-4 w-full font-poppins border-bright border-opacity-50 text-bright">
       <router-link to="/games" class="button-hover">games ></router-link>
@@ -42,6 +46,20 @@
   @apply hover:opacity-50
 }
 
+@keyframes drop-shadow-move {
+    0% {
+      filter: drop-shadow(-5px 0px 5px rgba(255, 255, 255, 0.1));
+    }
+    50% {
+      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
+    }
+    100% {
+      filter: drop-shadow(px 0px 5px rgba(255, 255, 255, 0.1));
+    }
+  }
 
+  .animate-drop-shadow-move {
+    animation: drop-shadow-move 5s infinite ease-in-out;
+  }
 
 </style>
