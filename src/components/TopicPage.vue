@@ -63,9 +63,9 @@ function clear(){
 <template>
     <!--TODO: CROSSPOLINATION PAGE - all my stuff together with a pretty crosspolination quote-->
     <div class="h-screen w-screen px-10 md:px-20 overflow-x-clip overflow-y-auto flex flex-col">
-        <header class="w-full mb-20 bg-dark">
+        <header class="w-full mb-20 bg-dark ">
             <div class="flex flex-row grid-rows-1 w-full justify-start items-baseline border-b pb-2 border-bright border-opacity-50">
-                <div class="text-bright text-center md:text-start w-full text-6xl md:text-8xl py-2 md:w-[33%]">
+                <div class="text-bright text-center md:text-start w-full text-6xl md:text-8xl py-2 md:w-[33%] header">
                     <h1 class="font-milker select-none">
                         {{ title }}<strong class="font-normal specialtext text-accent">'</strong>
                     </h1>
@@ -105,9 +105,10 @@ function clear(){
         </header>
 
         <ul class="grid md:grid-cols-4 2xl:grid-cols-5 gap-8 pb-10">
-            <li v-for="(card, index) in timelineContent.cards" class="*:h-48 md:*:h-64 *:min-h-full" :key="index">
+            <li v-for="(card, index) in timelineContent.cards" class="*:h-48 md:*:h-64 *:min-h-full " :key="index">
                 <a v-if="card.link" :href="card.link" target="_blank">
                     <TopicCard 
+                    :index="index"
                     :title="card.name" 
                     :time="card.time"
                     :linked="true"
@@ -121,6 +122,7 @@ function clear(){
                 </a>
                 <div v-else>
                     <TopicCard 
+                    :index="index"
                     :title="card.name" 
                     :time="card.time"
                     :linked="false"
@@ -144,22 +146,20 @@ function clear(){
     @apply hover:opacity-50 text-bright text-sm md:text-lg font-poppins;
 }
 
-.fade-slide-enter-active, .fade-slide-leave-active {
-    transition: opacity 0.2s ease, transform 0.2s ease;
+.header {
+  animation: header-enter 0.75s ease;
 }
 
-.fade-slide-enter-from, .fade-slide-leave-to {
+@keyframes header-enter {
+  from {
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-div::-webkit-scrollbar {
-    display: none;
-}
-
-div {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-}
 
 </style>
