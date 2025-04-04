@@ -5,13 +5,6 @@
     },
     "cards" : [
         {
-            "name" : "Work in progress...",
-            "time" : "Don't hurry!",
-            "description" : "I'm still working on this page.",
-            "big" : false,
-            "link" : ""
-        },
-        {
             "name" : "HARSH OST.",
             "time" : "September 2023",
             "big" : true,
