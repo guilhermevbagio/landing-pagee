@@ -21,7 +21,7 @@
       "n. the ambiguous intensity of looking someone in the eye, which can feel simultaneously invasive and vulnerable—their pupils glittering, bottomless and opaque—as if you were peering through a hole in the door of a house, able to tell that there’s someone standing there, but unable to tell if you’re looking in or looking out."
     </p>
     
-    <div class=" md:text-2xl font-poppins text-bright w-full text-justify flex flex-row">
+    <div class=" md:text-2xl font-poppins text-bright w-full py-2 md:pt-0 md:text-justify flex flex-col text-center md:flex-row">
       A&nbsp; w e b s i t e&nbsp; f o r&nbsp; 
      
       <p class="animate-drop-shadow-move">guilhermevbagio's</p>
