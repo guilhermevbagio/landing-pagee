@@ -5,8 +5,15 @@
     },
     "cards" : [
         {
+            "name" : "Pretty",
+            "time" : "May 2025",
+            "description" : "Producer",
+            "big" : false,
+            "link" : "https://www.youtube.com/watch?v=ZVp9QuCYC-k"
+        },
+        {
             "name" : "HARSH OST.",
-            "time" : "September 2023",
+            "time" : "May 2024",
             "big" : true,
             "link" : "https://www.youtube.com/watch?v=ByjaYzDPYk8&list=OLAK5uy_nhAKmnL1JkBsG-rMcTzZq2tAKe2gBh010&index=1",
             "imagePath" : "harsh.png",
