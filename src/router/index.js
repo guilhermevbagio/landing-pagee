@@ -1,9 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import HomePage from '@/views/HomePage.vue';
 import GamesPage from '@/views/GamesPage.vue';
 import MusicPage from '@/views/MusicPage.vue';
 import CodePage from '@/views/CodePage.vue';
-import ArtPage from '@/views/ArtPage.vue';
 import ContactPage from '@/views/ContactPage.vue';
 
 const routes = [
@@ -17,7 +16,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 });
 
