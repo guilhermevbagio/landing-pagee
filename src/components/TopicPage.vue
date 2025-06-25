@@ -88,13 +88,6 @@ function clear(){
                     music
                 </router-link>
                 <router-link 
-                    :to="title === 'art' ? '' : '/art'" 
-                    class="button-hover" 
-                    :class="{ 'pointer-events-none !text-accent': title === 'art' }"
-                >
-                    art
-                </router-link>
-                <router-link 
                     :to="title === 'code' ? '' : '/code'" 
                     class="button-hover" 
                     :class="{ 'pointer-events-none !text-accent': title === 'code' }"

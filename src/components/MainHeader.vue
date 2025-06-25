@@ -32,7 +32,6 @@
     <nav class="text-xs flex flex-row justify-around md:text-lg mt-2 border-t pt-4 w-full font-poppins border-bright border-opacity-50 text-bright">
       <router-link to="/games" class="button-hover">games ></router-link>
       <router-link to="/music" class="button-hover">music ></router-link>
-      <router-link to="/art" class="button-hover">art ></router-link>
       <router-link to="/code" class="button-hover">code ></router-link>
     </nav>
   </div>

@@ -5,12 +5,6 @@
     },
     "cards" : [
         {
-            "name" : "???",
-            "time" : "...",
-            "description" : "Perhaps...?",
-            "big" : false
-        },
-        {
             "name" : "Harsh. released",
             "time" : "October 2024",
             "description" : "",
@@ -35,30 +29,23 @@
             "imagePath" : "aisles-of-disorder.png"
         },
         {
-            "name" : "Opia Pirc is born",
+            "name" : "Opia Pirc",
             "time" : "February 2024",
-            "description" : "In february 2024, the development of HARSH. is paused for some game jams that I couldn't help but attend, this is the birth of Opia Pirc.",
+            "description" : "The first projects i issued under the name opia pirc.",
             "big" : false,
             "link" : "https://opiapirc.itch.io"
         },
         {
             "name" : "The game jam era",
             "time" : "Around 2019",
-            "description" : "My old itch.io, here lie some kinda cool projects of my younger self. Everything always was entirely self-produced and made with Unity.",
+            "description" : "My old itch.io. Everything always was entirely self-produced and made with Unity.",
             "big" : false,
             "link" : "https://ehoviana.itch.io"
         },
         {
-            "name" : "The viking game",
+            "name" : "Lost Media",
             "time" : "Early 2019",
-            "description" : "The file puzzle ideia made me consider picking an engine up and making a real game, this is where the journey starts, a game (never) made with GameMaker Studio 2 - also lost media.",
-            "big" : false,
-            "link" : ""
-        },
-        {
-            "name" : "The file sys puzzle",
-            "time" : "Early 2019",
-            "description" : "The first time I ever made a \"game\": trying to make a puzzle my friends at school couldn't beat (using txt files, folders and passwords). It probably didn't work and is lost media now.",
+            "description" : "All projects before this time have been lost, despite not being much to see.",
             "big" : false,
             "link" : ""
         }

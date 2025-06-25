@@ -11,7 +11,6 @@ const routes = [
   { path: '/games', name: 'games', component:  GamesPage},
   { path: '/music', name: 'music', component:  MusicPage},
   { path: '/code', name: 'code', component:  CodePage},
-  { path: '/art', name: 'art', component:  ArtPage},
   { path: '/contact', name: 'contact', component:  ContactPage}
 
 
