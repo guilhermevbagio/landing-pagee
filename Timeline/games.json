@@ -5,6 +5,14 @@
     },
     "cards" : [
         {
+            "name" : "POLYMETRY",
+            "time" : "August 2025 - GMTK JAM 2025",
+            "description" : "",
+            "big" : true,
+            "link" : "https://opiapirc.itch.io/polymetry",
+            "imagePath" : "polymetry.png"
+        },
+        {
             "name" : "Harsh. released",
             "time" : "October 2024",
             "description" : "",
@@ -15,14 +23,14 @@
         },
         {
             "name" : "the LOBSTER WARFARE PROGRAM",
-            "time" : "October 2024",
+            "time" : "October 2024  - GMTK JAM 2024",
             "description" : "Another game jam project.",
             "big" : false,
             "link" : "https://opiapirc.itch.io/lobsterwarfareprogram"
         },
         {
             "name" : "Aisles of Disorder",
-            "time" : "February 2024",
+            "time" : "February 2024 - BRACKEYS JAM 2024.1",
             "description" : "",
             "big" : true,
             "link" : "https://opiapirc.itch.io/aisles-of-disorder",
