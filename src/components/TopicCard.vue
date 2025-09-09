@@ -70,12 +70,12 @@ defineProps({
                 </div>
                 <h1 class="flex flex-row gap-2 justify-between items-start text-start align-top text-md w-full font-milker" :class="[ 
                         isHovered ? 'text-bright' : (!big ? 'text-accent' : 'text-bright'),
-                        big ? 'text-2xl leading-5 md:text-4xl md:leading-8 ' : 'md:text-lg md:leading-1',
+                        big ? 'text-2xl leading-5 md:text-3xl md:leading-8 ' : 'md:text-lg md:leading-1',
                         crowned ? 'drop-shadow-[0px_0px_5px_rgba(255,255,255,0.2)]' : ''
                     ]">
                     {{ title }} 
-                    <div v-if="linked">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24 " height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    <div v-if="linked" class="mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20 " height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                     </div>
                 </h1>
                 <div v-if="time" :class=" isHovered ? 'text-bright' : 'text-accent'" class="text-sm font-light font-poppins pt-1"> {{ time }} </div>
