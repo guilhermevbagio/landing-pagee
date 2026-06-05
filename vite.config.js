@@ -7,7 +7,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [vue(), vueDevTools()],
-  base: mode === "production" ? "/landing-pagee/" : "/",
+  base: mode === "production" ? "/" : "/",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
