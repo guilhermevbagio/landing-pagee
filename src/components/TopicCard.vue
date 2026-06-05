@@ -62,7 +62,7 @@ defineProps({
         v-if="crowned"
         class="absolute scale-[22%] -top-16 -translate-x-1 -translate-y-1 -right-20 rotate-[12deg] z-50 drop-shadow-[0px_0px_38px_rgba(255,255,255,0.3)]"
       >
-        <img src="/images/crown.png" />
+        <img :src="`${import.meta.env.BASE_URL}images/crown.png`" />
       </div>
       <div
         class="relative h-full w-full border rounded p-4 pb-1 border-accent transition-border overflow-clip"
@@ -78,7 +78,7 @@ defineProps({
         >
           <img
             class="h-full w-full object-cover"
-            :src="'/landing-pagee/images/' + imagePath"
+            :src="`${import.meta.env.BASE_URL}images/${imagePath}`"
           />
         </div>
         <h1

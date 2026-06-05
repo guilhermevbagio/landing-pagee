@@ -6,7 +6,7 @@ const name = ref(``);
 const text = ref(``);
 const timelineContent = ref([]);
 const isLoading = ref(true);
-const NEUTRAL_PATH = "/landing-pagee/Timeline/";
+const NEUTRAL_PATH = `${import.meta.env.BASE_URL}Timeline/`;
 
 const props = defineProps({
   title: {
